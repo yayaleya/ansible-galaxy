@@ -1,0 +1,26 @@
+list：
+ansible-galaxy list  #列出安装的所有galaxy
+
+install：
+ansible-galaxy install geerlingguy.nginx  #安装galaxy roles包
+
+remove：
+ansible-galaxy remove geerlingguy.nginx    #删除galaxy roles包
+
+init：
+ansible-galaxy init apache     #添加ansible galaxy角色
+
+info：
+ansible-galaxy info apache    #使用info命令可查看有关特定角色的更多详细信息
+
+import：
+ansible-galaxy import github_user github_repo   #import命令要求您首先使用login命令进行身份验证。 一旦经过身份验证，您可以导入您拥有或已被授予访问权限的任何GitHub存储库。
+
+delete：
+ansible-galaxy delete github_user github_repo   #delete命令要求您首先使用login命令进行身份验证。 通过身份验证，您可以从Galaxy网站中删除角色。 您只能删除您可以访问GitHub中的存储库的角色
+
+setup：
+ansible-galaxy setup travis github_user github_repo xxx-travis-token-xxx  #您可以使用setup命令创建集成，但在创建集成之前，必须首先使用login命令进行身份验证; 您还需要在Travis的帐户和您的Travis令牌。 准备好后，使用以下命令创建集成
+
+login：
+ansible-galaxy login    #login命令需要使用您的GitHub凭据。 您可以使用您的用户名和密码，也可以创建个人访问令牌 。 如果您选择创建令牌，则授予对令牌的最小访问权限，因为它仅用于验证标识。
